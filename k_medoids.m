@@ -9,7 +9,6 @@ function Out = k_medoids(data, k, s, epsilon)
   max_vals = max(data);
 
   centroids = rand(k, cols) * diag(max_vals - min_vals) + repmat(min_vals, k, 1)
-  labels = repmat(-1, k, 1);
 
   deltas = repelem(0, 100);
   deltas(1) = Inf;
